@@ -1,0 +1,36 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup elan toolchain
+        run: |
+          curl -O --location https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh
+          chmod u+x elan-init.sh
+          ./elan-init.sh -y --default-toolchain none
+          echo "Adding location $HOME/.elan/bin to PATH..."
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+      - name: Test elan & lean are working
+        run: |
+          elan --version
+          lean --version
+      - name : Get build cache
+        run: |
+          lake exe cache get
+      - name: Initial lake build
+        run: | 
+          lake build 
+      - name: classroom autograding
+        uses: education/autograding@v1
