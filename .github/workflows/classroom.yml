@@ -32,10 +32,10 @@ jobs:
       - name: Initial lake build
         run: | 
           lake build 
+      - name: classroom autograding
+        uses: education/autograding@v1
       - name : Emit hashes
         run: |
           shasum .github/workflows/classroom.yml
           shasum .github/classroom/autograding.json
           tar -cf - .github | shasum
-      - name: classroom autograding
-        uses: education/autograding@v1
