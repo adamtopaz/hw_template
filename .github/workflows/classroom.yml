@@ -36,5 +36,6 @@ jobs:
         run: |
           shasum .github/workflows/classroom.yml
           shasum .github/classroom/autograding.json
+          tar -cf - .github | shasum
       - name: classroom autograding
         uses: education/autograding@v1
