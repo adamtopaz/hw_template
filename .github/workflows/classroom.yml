@@ -35,6 +35,6 @@ jobs:
       - name : Emit hashes
         run: |
           shasum .github/workflows/classroom.yml
-          shasum .github/classroom/autograding.yml
+          shasum .github/classroom/autograding.json
       - name: classroom autograding
         uses: education/autograding@v1
