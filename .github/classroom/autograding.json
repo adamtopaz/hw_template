@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "grade",
+      "setup": "",
+      "run": "lake exe grade 421340980",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
