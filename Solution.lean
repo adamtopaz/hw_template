@@ -1,0 +1,1 @@
+def solution : Nat := 0
