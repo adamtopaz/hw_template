@@ -4,7 +4,7 @@
  [{"git":
    {"url": "https://github.com/adamtopaz/lean_grader",
     "subDir?": null,
-    "rev": "73c2e24b5f423cbef7ec53178dc70f4cbe40c886",
+    "rev": "2f0de3b0c88faa0ebe61a7bfdace90ab634b4ec6",
     "opts": {},
     "name": "lean_grader",
     "inputRev?": null,
