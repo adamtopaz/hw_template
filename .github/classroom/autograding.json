@@ -3,7 +3,7 @@
     {
       "name": "grade",
       "setup": "",
-      "run": "lake exe grade 421340980",
+      "run": "lake exe grade initial.pickle final.pickle",
       "input": "",
       "output": "",
       "comparison": "included",

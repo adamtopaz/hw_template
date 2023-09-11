@@ -1,1 +1,1 @@
-def solution : Nat := 37
+def solution : Nat := 37 

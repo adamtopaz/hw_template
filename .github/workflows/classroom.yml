@@ -32,10 +32,15 @@ jobs:
       - name: Initial lake build
         run: | 
           lake build 
-      - name: classroom autograding
-        uses: education/autograding@v1
       - name : Emit hashes
         run: |
           shasum .github/workflows/classroom.yml
           shasum .github/classroom/autograding.json
           tar -cf - .github | shasum
+      - name: Save Expr Pickles
+        run: |
+          lake exe grade save -c final.pickle final
+          git checkout `git rev-list --max-parents=0 HEAD | tail -n 1`
+          lake exe grade save initial.pickle initial
+      - name: classroom autograding
+        uses: education/autograding@v1
