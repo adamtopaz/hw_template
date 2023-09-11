@@ -1,1 +1,5 @@
-def solution : Nat := sorry 
+structure SolutionStruct where
+  nat : Nat
+  string : String
+
+def solution : SolutionStruct := sorry 
