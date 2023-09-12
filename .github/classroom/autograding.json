@@ -3,7 +3,7 @@
     {
       "name": "grade",
       "setup": "",
-      "run": "lake exe grade check env.pickle val.pickle type.pickle",
+      "run": "lake exe grade check val.pickle type.pickle",
       "input": "",
       "output": "",
       "comparison": "included",

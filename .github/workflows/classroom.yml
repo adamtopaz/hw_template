@@ -39,7 +39,6 @@ jobs:
           tar -cf - .github | shasum
       - name: Save Expr Pickles
         run: |
-          lake exe grade save_env env.pickle env
           lake exe grade save_val val.pickle val
           git checkout `git rev-list --max-parents=0 HEAD | tail -n 1`
           lake exe grade save_type type.pickle type
