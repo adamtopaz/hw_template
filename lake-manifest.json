@@ -4,10 +4,10 @@
  [{"git":
    {"url": "https://github.com/adamtopaz/lean_grader",
     "subDir?": null,
-    "rev": "d323d3743a06cc486ebfe5bdb77cff81db874feb",
+    "rev": "1134c4b4634a3441f168145099c92444fef1691f",
     "opts": {},
     "name": "lean_grader",
-    "inputRev?": null,
+    "inputRev?": "hash_approach",
     "inherited": false}},
   {"git":
    {"url": "https://github.com/EdAyers/ProofWidgets4",

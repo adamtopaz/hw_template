@@ -6,7 +6,7 @@ package «hw_template» {
 }
 
 require lean_grader from git
-  "https://github.com/adamtopaz/lean_grader"
+  "https://github.com/adamtopaz/lean_grader" @ "hash_approach"
 
 @[default_target]
 lean_lib «HwTemplate» {
